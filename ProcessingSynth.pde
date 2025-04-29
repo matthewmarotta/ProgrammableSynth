@@ -83,7 +83,7 @@ void fileSelected(File selection) {
 
   //Delay (parameters can be changed to edit the sound)
   tin = new TapIn(ac, 1000);  // buffer size: 1000 ms
-  delayGlide = new Glide(ac, 250); // default delay = 500ms
+  delayGlide = new Glide(ac, 250); // default delay = 250ms
   tout = new TapOut(ac, tin, delayGlide); // pass the Glide as the delay value
   gDelay = new Gain(ac, 2, 0.3);
   gDelay.addInput(tout);
@@ -126,7 +126,7 @@ void volume(float theValue) {
   }
 }
 
-void reverbSize(float theValue) {
+void reverbSize(float theValue) {https://github.com/matthewmarotta/ProgrammableSynth/blob/main/ProcessingSynth.pde
   if (r != null) {
     r.setSize(theValue);
   }
